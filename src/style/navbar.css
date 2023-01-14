@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+
+    align-items: center;
+}
+.logo{
+    padding: 20px;
+}
+.logo h3{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+
+    cursor: pointer;
+}
+.logo h3:hover{
+    color: red;
+    transition: all 0.3s;
+
+}
+#list{
+    list-style-type: none;
+    display: flex;
+}
+#list li {
+    margin: 0 20px;
+}
+#list li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+#list li a:hover{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s;
+    background-color: rgb(116, 116, 116);
+    border-radius: 20px;
+}
+
+#mobile{
+    display: none;
+    /* color: aqua; */
+}
+
+
+@media screen and (max-width: 768px){
+    #mobile{
+        display: block;
+    }
+
+    #list{
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: start;
+        position: fixed;
+        top: 100px;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        padding: 20px;
+        background-color: rgb(0, 0, 0);
+
+        transition: 0.3s ease-in-out;
+    }
+    #list li{
+        margin-bottom: 20px;
+    }
+
+
+
+    #mobile i{
+        color: white;
+        cursor: pointer;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+    #list.active{
+        right: 0;
+    }
+
+    #list li a:hover{
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
